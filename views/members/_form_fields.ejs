@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <label for="">Name</label>
+    <input type="text" name="name" value="<%= member.name %>" />
+  </div>
+  <div>
+    <label for="">Last Name</label>
+    <input type="text" name="lastName" value="<%= member.lastName %>" />
+  </div>
+  <div>
+    <label for="">Joined Date</label>
+    <input type="date" name="joinDate" value="<%= member.joinDate == null? "" :
+    member.joinDate.toISOString().split("T")[0] %>" />
+  </div>
+  <div>
+    <label for="">Plan</label>
+    <input type="text" name="plan" value="<%= member.plan %>" />
+  </div>
+  <div>
+    <label for="">Image</label>
+    <input type="file" name="imageFile" class="filepond" />
+  </div>
+</div>

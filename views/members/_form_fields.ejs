@@ -1,23 +1,28 @@
-<div>
-  <div>
+<h2>Add Gym Member</h2>
+<div class="form-row">
+  <div class="form-item">
     <label for="">Name</label>
     <input type="text" name="name" value="<%= member.name %>" />
   </div>
-  <div>
+  <div class="form-item">
     <label for="">Last Name</label>
     <input type="text" name="lastName" value="<%= member.lastName %>" />
   </div>
-  <div>
+</div>
+<div class="form-row">
+  <div class="form-item">
     <label for="">Joined Date</label>
     <input type="date" name="joinDate" value="<%= member.joinDate == null? "" :
     member.joinDate.toISOString().split("T")[0] %>" />
   </div>
-  <div>
+  <div class="form-item">
     <label for="">Plan</label>
     <input type="text" name="plan" value="<%= member.plan %>" />
   </div>
-  <div>
+</div>
+<div class="form-row">
+  <div class="form-item form-item-no-grow">
     <label for="">Image</label>
-    <input type="file" name="imageFile" class="filepond" />
+    <input type="file" name="imageFile" class="book-cover filepond" />
   </div>
 </div>

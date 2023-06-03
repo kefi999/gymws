@@ -1,0 +1,9 @@
+<h2 class="page-heading">Edit <%= member.name %></h2>
+<form action="/member/<%= member.id %>?_method=PUT" method="POST">
+  <%- include("_form_fields_edit.ejs")%>
+  <div class="btns">
+    <a class="btn btn-primary" href="/">Cancel</a>
+    <button class="btn btn-primary" type="submit">Update</button>
+  </div>
+</form>
+<%- include("../partials/delete",{url: `/member/${member.id}`})%>

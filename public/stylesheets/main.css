@@ -1,0 +1,23 @@
+@import "shared/header.css";
+@import "shared/variables.css";
+@import "shared/buttons.css";
+@import "shared/form.css";
+@import "shared/table.css";
+:root {
+  font-size: 20px;
+  color: var(--color-text-light);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    var(--color-background-dark),
+    var(--color-background-light)
+  );
+}

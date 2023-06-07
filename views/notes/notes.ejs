@@ -1,0 +1,27 @@
+<h2>Add a New Note</h2>
+<form action="/notes/new" method="POST">
+  <div class="form-row">
+    <div class="form-item">
+      <label for="name">Name:</label>
+      <input type="text" name="name" />
+    </div>
+    <div class="form-item">
+      <label for="text">Text</label>
+      <textarea name="description"></textarea>
+    </div>
+  </div>
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary">Submit</button>
+  </div>
+</form>
+<% notes.forEach(note=>{ %>
+<div class="notes-row">
+  <div class="notes-item">
+    <label><%= note.name %></label>
+  </div>
+  <div class="notes-item">
+    <textarea readonly><%= note.textarea %></textarea>
+  </div>
+</div>
+
+<% }) %>

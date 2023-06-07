@@ -11,6 +11,7 @@ const methodOverride = require("method-override");
 
 const indexRouter = require("./routes/index");
 const memberRouter = require("./routes/member");
+const notesRouter = require("./routes/notes");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -24,6 +25,7 @@ app.use(methodOverride("_method"));
 //ROUTERS
 app.use("/", indexRouter);
 app.use("/member", memberRouter);
+app.use("/notes", notesRouter);
 //ROUTERS
 
 //MONGOOSE

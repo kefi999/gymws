@@ -1,23 +1,28 @@
-<div>
-  <div>
+<div class="form-row">
+  <div class="form-item">
     <label for="">Name</label>
     <input type="text" name="name" value="<%= member.name %>" />
   </div>
-  <div>
+  <div class="form-item">
     <label for="">Last Name</label>
     <input type="text" name="lastName" value="<%= member.lastName %>" />
   </div>
-  <div>
+</div>
+<div class="form-row">
+  <div class="form-item">
     <label for="">Expiration Date</label>
     <input type="date" name="expirationDate" value="<%= member.expirationDate ==
     null? "" : member.expirationDate.toISOString().split("T")[0] %>" />
   </div>
-  <div>
+  <div class="form-item">
     <label for="">Plan</label>
     <input type="text" name="plan" value="<%= member.plan %>" />
   </div>
-  <div>
+</div>
+
+<div class="form-row">
+  <div class="form-item form-item-no-grow">
     <label for="">Image</label>
-    <input type="file" name="imageFile" class="filepond" />
+    <input type="file" name="imageFile" class="book-cover filepond" />
   </div>
 </div>

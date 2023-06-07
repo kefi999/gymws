@@ -1,0 +1,13 @@
+.notes-row {
+  display: flex;
+  flex-wrap: wrap();
+  justify-content: center;
+}
+
+.notes-item {
+  margin: 2rem;
+}
+
+.notes-item textarea {
+  resize: none;
+}

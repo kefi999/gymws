@@ -23,7 +23,8 @@
 .form-item:first-child {
   margin-left: 0;
 }
-.form-item input {
+.form-item input,
+textarea {
   height: 2rem;
   padding: 0, 25rem 0, 5rem;
   border-radius: 0.25rem;
@@ -35,7 +36,8 @@
   outline: none;
 }
 
-.form-item input:focus {
+.form-item input,
+textarea:focus {
   border-color: var(--form-input-border-color-light);
 }
 .filepond--root {
@@ -52,4 +54,8 @@
 }
 .form-row-end {
   justify-content: end;
+}
+.form-item textarea {
+  height: 10rem;
+  resize: none;
 }

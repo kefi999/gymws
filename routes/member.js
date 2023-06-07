@@ -49,7 +49,6 @@ router.put("/:id", async (req, res) => {
     member.plan = req.body.plan;
 
     if (req.body.imageFile != null && req.body.imageFile != "") {
-      console.log("here");
       saveImage(member, req.body.imageFile);
     }
     await member.save();
@@ -57,6 +56,41 @@ router.put("/:id", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.redirect("/");
+  }
+});
+
+//did someone steal the req.body(being used by the first put)
+router.put("/:id/extendft", async (req, res) => {
+  let member;
+  try {
+    member = await Member.findById(req.params.id);
+    member.expirationDate = addDays(new Date(member.expirationDate), 14);
+    await member.save();
+    res.redirect("/");
+  } catch (error) {
+    console.log(error);
+  }
+});
+router.put("/:id/extendseven", async (req, res) => {
+  let member;
+  try {
+    member = await Member.findById(req.params.id);
+    member.expirationDate = addDays(new Date(member.expirationDate), 7);
+    await member.save();
+    res.redirect("/");
+  } catch (error) {
+    console.log(error);
+  }
+});
+router.put("/:id/extendthirty", async (req, res) => {
+  let member;
+  try {
+    member = await Member.findById(req.params.id);
+    member.expirationDate = addDays(new Date(member.expirationDate), 30);
+    await member.save();
+    res.redirect("/");
+  } catch (error) {
+    console.log(error);
   }
 });
 router.delete("/:id", async (req, res) => {
@@ -82,6 +116,7 @@ function saveImage(member, imageEncoded) {
   }
 }
 function addDays(date, days) {
+  console.log(date);
   let result = new Date(date);
   result.setDate(result.getDate() + days);
   return result;
